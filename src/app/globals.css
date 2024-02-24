@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root {
+  height: 100%;
+}
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --background-off: #f3f5f6;
+
+    --foreground: #f1f1f1;
+    --foreground-off: #36373a;
+
+    --text-primary: #09090e;
+    --text-secondary: #8f8f8f;
+
+    --primary: #36373a;
+    --primary-off: #262629;
+
+    --secondary: #97b9ff; /* Corrected variable name */
+    --secondary-off: #5e739e;
+
+    --border: rgba(15, 15, 15, 0.2);
+  }
+
+  .dark {
+    color-scheme: dark;
+    --background: #0f0f0f;
+    --background-off: #242424;
+
+    --foreground: #212121;
+    --foreground-off: rgba(112, 112, 112, 0.01);
+
+    --text-primary: #ffffff;
+    --text-secondary: #8f8f8f;
+
+    --primary: #766ac8;
+    --primary-off: #4d4588;
+
+    --secondary: #2c2c2c; /* Corrected variable name */
+    --secondary-off: #36373a93;
+
+    --border: rgb(48, 48, 48);
+  }
+}
+
+/* custom  */
+
+input,
+textarea {
+  @apply h-full w-full border-none bg-transparent outline-none;
+}
+
+span {
+  @apply text-sm text-text-secondary;
+}
+
+img {
+  @apply h-full w-full object-cover;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: thin;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-secondary-off bg-opacity-10;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-secondary bg-opacity-5;
+}
